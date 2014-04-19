@@ -92,8 +92,8 @@
                             
                                     <h1>Gene Wheeler</h1>
                         </div>
-                        <p>complete certified coin broker services<br/>
-                        with the highest level of<br/>integrity, courtesy, professionalism, and honesty</p>
+                        <p>complete certified coin broker services with<br/>integrity, courtesy, professionalism, and honesty</p>
+                        <p style="font-size:13px;">American Numismatic Association Life Member &bull; Texas Numismatic Association Life Member<br/>Texas Coin Dealer Association &bull; Professional Currency Dealers Association</p>
                         <div class="social-icons sicon-white bordered">
 	                        <a href="#page-contact" class="sicon-phone"><i>Phone</i></a>
 	                        <a href="#page-contact" class="sicon-mail"><i>Email</i></a>
@@ -187,7 +187,7 @@
                 <div class="row">
                     <div class="span8 offset2">
                         <p>
-                            Specializing in both large and small United States Bank Notes and Texas National Bank Notes.
+                            Specializing in both large and small United States Bank Notes<br>and Texas National Bank Notes.
                         </p>
                     </div>
                 </div>
@@ -227,6 +227,13 @@
         <div class="container">
             <h4 class="line-divider-inline center">Spot Prices</h4>
             <!-- Client logos -->
+            <div class="row-fluid">
+            	<div class="span8 center offset2">
+					<a href="http://www.kitco.com/connecting.html">
+					  <img src="http://www.kitconet.com/images/quotes_7a.gif" border="0" alt="[Most Recent Quotes from www.kitco.com]">
+					</a>
+            	</div>
+            </div>
             <div class="row-fluid" style="margin-bottom:60px;">
                 <div class="span2 center offset2">
                    	<a href="http://www.kitco.com/connecting.html"><img src="http://www.kitconet.com/charts/metals/gold/t24_au_en_usoz_2.gif" alt="[Most Recent Quotes from www.kitco.com]" border="0"></a> 
@@ -269,14 +276,14 @@
                 <!-- Features blocks -->
                 <div class="row-fluid" style="margin-bottom:100px;">
                     <div class="span4 center offset2">
-                        <img src="assets/images/pages/features/about04.png" alt="Treble">
-                        <h5>TNA Coin & Currency Show<br/>May 18-20, 2012</h5>
-                        <p class="smallFontBy08 cutBy10">Amon G. Carter Center - Will Rogers Complex<br/>Fort Worth, TX</p>
+                        <img src="assets/images/pages/features/about04.png" alt="Show">
+                        <h5>TNA Coin & Currency Show<br/>May 16-18, 2014</h5>
+                        <p class="smallFontBy08 cutBy10">Arlington Convention Center<br/>Arlington, TX</p>
                     </div>
                     <div class="span4 center">
-                        <img src="assets/images/pages/features/about04.png" alt="Treble">
-                        <h5>TNA Coin & Currency Show<br/>May 31 - June 2, 2012</h5>
-                        <p class="smallFontBy08 cutBy10">The Long Beach Convention Center<br/>Long Beach, CA</p>
+                        <img src="assets/images/pages/features/about04.png" alt="Show">
+                        <h5>Wichita Falls Coin and Stamp Show<br/>May 30-31, 2014</h5>
+                        <p class="smallFontBy08 cutBy10">Multi Purpose Event Center<br/>Wichita Falls, TX</p>
                     </div>
                 </div>
                
@@ -439,23 +446,22 @@ $(function()
 		var unbind = false;
 		var blink = function()
 		{
-			
 			$(".p-scroll").fadeOut(1000, function() { if (!unbind) $(".p-scroll").fadeIn(1000, blink);})
 		}
 
 		setTimeout(blink, 2000)
 
-		$(window).scroll(function()
+		var handler = function()
 		{
-			console.log('hi')
 			unbind = true;
+			console.log('hi')
 			$(".p-scroll").hide();
-			$(window).unbind("scroll");
-		})
+			$(window).off("scroll", handler);
+
+		};
+
+		$(window).on("scroll", handler);
 })
-
-
-
     </script>
     
     
